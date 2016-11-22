@@ -23,8 +23,31 @@ $ mvn install
 - Clone this demo as shown below
 
 ```
+$ https://github.com/papicella/GoogleAppEngineSpringBoot.git
+$ mvn package
+```
+
+- Target your project for deployment as follows
 
 ```
+pasapicella@pas-macbook:~/piv-projects/GoogleAppEngineSpringBoot$ gcloud projects list
+PROJECT_ID              NAME                    PROJECT_NUMBER
+bionic-vertex-150302    AppEngineSpringBoot     97889500330
+fe-papicella            FE-papicella            1049163203721
+pas-spring-boot-on-gcp  Pas Spring Boot on GCP  1043917887789
+
+pasapicella@pas-macbook:~/piv-projects/GoogleAppEngineSpringBoot$ gcloud config set project fe-papicella
+Updated property [core/project].
+
+```
+
+- deploy as follows
+
+```
+$ mvn appengine:deploy
+```
+
+![alt tag](https://dl.dropboxusercontent.com/u/15829935/platform-demos/images/gae-springboot-1.png)
 
 <hr />
 Pas Apicella [papicella at pivotal.io] is a Senior Platform Architect at Pivotal Australia 
