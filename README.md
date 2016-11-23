@@ -24,6 +24,27 @@ $ mvn install
 
 ```
 $ https://github.com/papicella/GoogleAppEngineSpringBoot.git
+$ cd GoogleAppEngineSpringBoot
+```
+
+- Edit the file ./src/main/webapp/WEB-INF/appengine-web.xml to specify the correct APPLICATION ID which we will target 
+in the step below as well.
+
+```
+<?xml version="1.0" encoding="utf-8"?>
+<appengine-web-app xmlns="http://appengine.google.com/ns/1.0">
+ <application>fe-papicella</application>
+ <version>5</version>
+   <threadsafe>true</threadsafe>
+ <manual-scaling>
+  <instances>1</instances>
+ </manual-scaling>
+</appengine-web-app>
+```
+
+- Package as shown below
+
+```
 $ mvn package
 ```
 
